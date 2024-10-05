@@ -1,0 +1,63 @@
+/* admin portfolio gallery images */
+#gallery_images_container {
+    display: flex;         
+    flex-wrap: wrap;     
+    justify-content: flex-start; 
+    gap: 10px;            
+}
+
+#gallery_images_container #gallery_image {
+    flex: 0 1 200px;      
+    height: 150px;        
+    background-color: #eee; 
+    border-radius: 5px;  
+    overflow: hidden;      
+}
+#gallery_images_container a.delete-image {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration:none;
+
+}
+#gallery_images_container .gallery-image-container, 
+#gallery_images_container .gallery-image{
+    position: relative;
+}
+
+#gallery_images_container .gallery-image img{
+    width: 120px;
+    height: 120px; 
+     object-fit: cover;
+}
+
+
+/* admin portfolio video */
+.extra-gallery-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+a.remove-extra-gallery-row.button {
+    background: red;
+    color: #fff;
+    border: unset;
+}
+
+#extra_gallery_images_container {
+    margin-top: 20px;
+}
+.extra-gallery-row img {
+    height: 80px;
+    width: 80px ;
+    object-fit: cover;
+}
+
+.extra-gallery-row input {
+    width: auto;  
+}

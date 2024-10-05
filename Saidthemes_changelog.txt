@@ -1,0 +1,48 @@
+
+
+SaidThemes 1.1.2 Updates
+
+Hello everyone!
+
+Improvements:
+
+
+- Make video thumbnail with better quallity
+- Add custom CSS to the WordPress admin dashboard 
+
+
+Upgrade now to experience these improvements!
+
+As always, if you have questions or need assistance, we’re here for you.
+
+Best,
+
+Team SaidThemes
+
+-----------------------------------------
+
+
+
+SaidThemes 1.1.1 Updates
+
+Hello everyone!
+
+Improvements:
+
+
+- portfolio: add new field to portfolio, Now you can add youtub video to tabs 
+- portfolio: gallery images more flixible 
+- portfolio: Change the order of images in your gallery
+- LightBox: We’ve fixed issues
+- LightBox: We’ve add swipper
+- we've add meta box Presentation (image, title and description)
+- Optimization speed : Load viedo after click in thumbnail 
+
+
+Upgrade now to experience these improvements!
+
+As always, if you have questions or need assistance, we’re here for you.
+
+Best,
+
+Team SaidThemes

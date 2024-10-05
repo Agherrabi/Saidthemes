@@ -1,0 +1,456 @@
+/* Global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:#202020;
+}
+section.page-wrap {
+    min-height: 100vh;
+}
+@media (max-width: 800px) {
+    section.page-wrap > .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+/* header */
+header {
+    padding: 20px 0; /* Top and bottom padding */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Center items vertically */
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px; /* Side padding */
+}
+
+.site-logo h1 {
+    margin: 0; /* Remove default margin */
+}
+
+.st-header-menu {
+    list-style: none; /* Remove bullets from the menu */
+    display: flex; /* Horizontal menu */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.st-header-menu li {
+    margin-left: 20px; /* Space between menu items */
+}
+
+.st-header-menu a {
+    text-decoration: none; /* Remove underline */
+    color: #ffffff; /* Text color */
+    font-weight: bold; /* Bold text */
+    font-size:20px !important;
+}
+
+.st-header-menu a:hover {
+    color: #ff914d; /* Change color on hover */
+}
+
+@media (max-width: 600px) {
+    .custom-logo-link img{
+      width:250px;
+        height:auto;
+      object-fit:contain;
+  }
+}
+
+@media (max-width: 480px) {
+    .custom-logo-link img{
+      width:180px;
+      object-fit:contain;
+  }
+}
+
+
+
+/* Custom post style : Tabs style */
+
+/* Tab Navigation Styles */
+#galleryTab {
+    border-bottom: 1px solid #ffffff; /* Bottom border for tabs */
+}
+
+.nav-item {
+    margin-right: 15px; /* Space between tabs */
+}
+
+.nav-link {
+    padding: 10px 20px; /* Padding for tabs */
+    border: 1px solid transparent; /* Border to prevent layout shift */
+    border-radius: 5px 5px 0 0; /* Rounded corners */
+    background-color: #f8f9fa; /* Light background */
+    color: #333; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: 500; /* Medium font weight */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+
+.nav-link.active, .nav-link:hover {
+    background-color: #ff914d !important; /* Active tab background color */
+    color: #ffffff !important; /* Active tab text color */
+    border-color: #ff914d; /* Border color for active tab */
+}
+
+/* Optional: Add box-shadow to the active tab for a modern look */
+.nav-link.active {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+.tab-content h2{
+    display:none;
+    color:#fff;
+    font-size:25px;
+    margin-top:15px;
+}
+
+@media (max-width: 480px) {
+    li.nav-item {
+        width: 100%;
+        margin: 0 0 5px 0;
+    }
+}
+
+
+/* Gallery Container */
+.gallery-images {
+    column-count: 3; /* Number of columns for larger screens */
+    column-gap: 15px; /* Space between columns */
+    margin-top: 20px;
+}
+
+/* Individual Gallery Image */
+
+.gallery-images img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    /* max-height: 400px;  */
+    object-fit: cover; /* Ensure images fill their space */
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.gallery-images img:hover {
+    transform: scale(1.008); /* Slight zoom-in effect on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-images {
+        column-count: 2; /* Two columns for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-images {
+        column-count: 1; /* One column for small screens */
+    }
+}
+
+
+
+/* CSS for the Lightbox */
+
+.lightbox-gallery.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox-gallery .swiper-container {
+    width: 100%;
+    height: 100vh;
+    padding: 50px 0;
+}
+
+.lightbox-gallery .swiper-slide img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lightbox-gallery .swiper-button-prev, .lightbox-gallery .swiper-button-next {
+    color: white;
+    z-index:900000 !important;
+}
+
+.lightbox-gallery .swiper-button-prev:hover, .lightbox-gallery .swiper-button-next:hover {
+    color: #ff914d ;
+}
+
+
+.lightbox-gallery .close {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    z-index:999999999;
+}
+.lightbox-gallery .close:hover {
+    color: red !important;
+}
+
+
+/* whatssap icon */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    background-color: #25D366; /* WhatsApp color */
+    border-radius: 50%; /* Circular icon */
+    padding: 10px; /* Space around the icon */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.whatsapp-icon img {
+    width: 40px; /* Size of the icon */
+    height: 40px; /* Size of the icon */
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+@media (max-width: 480px) {
+/* whatssap icon */
+.whatsapp-icon {
+    padding: 5px; /* Space around the icon */
+}
+
+.whatsapp-icon img {
+    width: 30px; /* Size of the icon */
+    height: 30px; /* Size of the icon */
+}
+}
+
+/* Footer */
+.site-footer {
+    background-color: #ff914d; /* Dark background color */
+    color: #ffffff; /* Text color */
+    padding: 15px 0; /* Vertical padding */
+    text-align: center; /* Center text */
+    margin-top: 30px;
+}
+.site-footer .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.site-footer .container {
+    margin: 0 auto; /* Center align */
+    padding: 0 15px; /* Horizontal padding */
+}
+
+.site-footer .footer-content p {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Font size for copyright text */
+}
+
+.site-footer .social-links {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Top margin */
+}
+
+.site-footer .social-links li {
+    display: inline; /* Inline display for horizontal alignment */
+    margin: 0 10px; /* Space between icons */
+}
+
+.site-footer .social-links a {
+    color: #ffffff; /* Icon color */
+    font-size: 20px; /* Icon size */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.site-footer .social-links a:hover {
+    color: #202020; /* Change color on hover */
+}
+@media (max-width: 480px) {
+    .site-footer .footer-content {
+        flex-direction: column;
+    }
+}
+
+
+
+
+/* video frontend : tas video */
+
+.extra-gallery-images {
+    padding-top: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.extra-gallery-item {
+    width: calc(33.33% - 20px);
+    position: relative;
+    height:400px;
+    overflow:hidden;
+    border-radius: 20px;
+    background:#000000;
+}
+.extra-gallery-item img {
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    overflow: hidden;
+}
+.extra-gallery-item iframe {
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 2;
+    position: relative;
+}
+
+/* icon youtube */
+.extra-gallery-item:after {
+    content: "\f16a";
+    font-family: "FontAwesome";
+    font-size: 31px;
+    color: #ff0000;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    font-weight: 600;
+    height: 13px;
+    width: 16px; 
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    animation: fade 2s forwards; 
+}
+.extra-gallery-item a:before {
+    content: "\f16a";
+    font-family: "FontAwesome";
+    font-size: 100px;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50% , -50%);
+    font-weight: 600;
+    border-radius: 5px;
+    z-index: 1;
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#0000009c;
+    transition:1.5;
+    opacity:0;
+    border-radius: 20px;
+}
+.extra-gallery-item a:hover:before {
+    opacity:1;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0; 
+        background: transparent;
+    }
+    90% { 
+        background: transparent;
+    }
+    100% {
+        opacity: 1;
+        background: #fff;
+     
+    }
+}
+
+@media (max-width: 1024px) {
+    .extra-gallery-item {
+        width: calc(50% - 20px);
+        position: relative;
+    }
+}
+@media (max-width: 800px) {
+    .extra-gallery-item {
+        width: 100%;
+    }
+}
+
+
+
+
+/* prsentation tabs  */
+
+.gallery-presntaion {
+    margin-top: 20px;
+    display: flex;
+    gap:40px;
+}
+.presentation-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.presentation-image, .presentation-content {
+    width: 50%;
+}
+.presentation-image img {
+    width: 100%;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.presentation-title {
+    color: #fff;
+}
+
+p.presentation-text {
+    color: #fff;
+}
+
+
+@media (max-width: 800px) {
+    .gallery-presntaion {
+        gap:20px;
+    }
+}
+@media (max-width: 800px) {
+    .gallery-presntaion {
+        flex-direction: column;
+    }
+    .presentation-image, .presentation-content {
+        width: 100%;
+    }
+    .presentation-image {
+        order: 2;
+    }
+}
